@@ -55,8 +55,9 @@ import flixel.tweens.FlxEase;
 import flixel.effects.FlxFlicker;
 
 // FUNKIN / ENGINE
-import funkin.backend.events.*;
+import funkin.backend.events.*; // WARNING: This does NOT import directories in events, this just import the IMPORTANT events
 import funkin.backend.math.FunkinMath;
+import funkin.backend.display.video.FunkinVideo;
 import funkin.backend.system.EngineCore;
 import funkin.backend.system.Main;
 

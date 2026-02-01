@@ -1,6 +1,7 @@
 package funkin.backend.system;
 
 import lime.app.Application;
+import funkin.backend.events.EventDispatcher;
 import funkin.backend.system.crash.CrashHandler;
 import funkin.backend.system.display.PerformanceOverlay;
 
@@ -17,6 +18,8 @@ class EngineCore {
     public static var initialized(default, null):Bool = false;
     public static var debugMode(default, null):Bool = false;
     public static var version(default, null):Null<String> = null;
+
+    public static final events:EventDispatcher = new EventDispatcher();
 
     public static var overlay:PerformanceOverlay;
 
