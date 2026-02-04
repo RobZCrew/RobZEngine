@@ -126,7 +126,7 @@ class CrashHandler {
             FileSystem.createDirectory(logDir);
 
         var date = Date.now();
-        var fileName = 'crash_${date.toString().replace("-", "").replace(" ", "").replace(":", "")}.txt';
+        var fileName = 'crash_${date.toString().replace(" ", "_").replace(":", "-")}.txt';
         var path = logDir + "/" + fileName;
 
         var content = 

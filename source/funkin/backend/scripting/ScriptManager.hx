@@ -91,4 +91,13 @@ class ScriptManager {
         var code = sys.io.File.getContent(path);
         runSafe(code);
     }
+
+    public function bindState(state:Dynamic):ScriptContext {
+        var name = Type.getClassName(Type.getClass(state));
+        var ctx = new ScriptContext(name, interp);
+
+        ctx.expose('state', state);
+
+        return ctx;
+    }
 }

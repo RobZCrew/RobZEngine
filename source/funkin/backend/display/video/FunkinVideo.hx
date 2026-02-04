@@ -27,7 +27,7 @@ class FunkinVideo extends FlxVideoSprite {
     public var onEnd:Void->Void;
 
     /** The background of the video (if addBackground is true). */
-    public var videoBackground:Null<FlxSprite> = null;
+    public var videoBackground:FlxSprite;
 
     /** Internal guard to avoid multiple end calls. */
     var _ended:Bool = false;
@@ -36,7 +36,7 @@ class FunkinVideo extends FlxVideoSprite {
     var _destroyed:Bool = false;
 
     /** Internal path for VideoEndEvent. */
-    var _path:Null<String> = null;
+    var _path:String;
 
     /**
      * Creates a new FunkinVideo.
@@ -80,7 +80,7 @@ class FunkinVideo extends FlxVideoSprite {
     }
 
     function finishVideo():Void {
-        if (!_destroyed || !_ended) return;
+        if (_destroyed || _ended) return;
 
         var event = new VideoEndEvent(this, _path, loop);
         EngineCore.events.dispatch(event);
