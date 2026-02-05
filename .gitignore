@@ -3,5 +3,7 @@ export/
 .haxelib/
 dump/
 engine-templates/
+unused/
+mods/
 setup-windows.txt
 checkreadme.md

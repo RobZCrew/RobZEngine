@@ -90,7 +90,7 @@ class ScriptContext {
      * @param args Optional arguments passed to the function.
      * @return The function result, or null if not called.
      */
-    public function call(funcName:String, ?args:Array<Dynamic>):Dynamic {
+    public function call(funcName:String, ?args:Array<Dynamic> = []):Dynamic {
         if (interp == null) return null;
         if (!interp.variables.exists(funcName)) return null;
 

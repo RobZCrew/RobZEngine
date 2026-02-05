@@ -47,6 +47,7 @@ class EngineCore {
         #end
 
         CrashHandler.init();
+        Options.load();
 
         log('EngineCore initialized');
     }
